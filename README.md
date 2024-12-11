@@ -72,14 +72,18 @@ Before running this project, ensure you have the following installed:
 react-redux-crud/
 ├── public/                # Static assets
 ├── src/
-│   ├── actions/          # Redux action creators
+│   ├── action.js         # Redux action creators
 │   ├── components/       # React components
-│   ├── reducers/         # Redux reducers
-│   ├── store/            # Redux store configuration
+│   │     ├── add.js      # Component for adding a new user via a form.
+│   │     ├── updata.js   # Component for updating an existing user with prefilled data.
+│   │     └── list.js     # Component for displaying the list of users and providing edit/delete actions.
+│   ├── reducer.js        # Redux reducers
+│   ├── store.js          # Redux store configuration
 │   ├── App.js            # Main application component
 │   └── index.js          # Entry point
 ├── package.json          # Project metadata and dependencies
 └── README.md             # Project documentation
+
 ```
 
 ## Technologies Used
