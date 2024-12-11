@@ -75,7 +75,7 @@ react-redux-crud/
 │   ├── action.js         # Redux action creators
 │   ├── components/       # React components
 │   │     ├── add.js      # Component for adding a new user via a form.
-│   │     ├── updata.js   # Component for updating an existing user with prefilled data.
+│   │     ├── update.js   # Component for updating an existing user with prefilled data.
 │   │     └── list.js     # Component for displaying the list of users and providing edit/delete actions.
 │   ├── reducer.js        # Redux reducers
 │   ├── store.js          # Redux store configuration
