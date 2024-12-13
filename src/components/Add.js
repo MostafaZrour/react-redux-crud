@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../Action";
 import List from "./List";
 
-
 const Add = () => {
   const [name, setName] = useState("");
   const dispatch = useDispatch();
