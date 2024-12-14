@@ -9,7 +9,7 @@ const Update = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState({});
   const user = useSelector((state) =>
-    state.users.find((user) => Number(user.id) === Number(id))
+    state.userReducer.users.find((user) => Number(user.id) === Number(id))
   );
 
   const [name, setName] = useState("");
