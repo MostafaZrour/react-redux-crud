@@ -79,7 +79,7 @@ react-redux-crud/
 │   │     └── list.js     # Component for displaying the list of users and providing edit/delete actions.
 │   ├── reducer.js        # Redux reducers
 │   ├── store.js          # Redux store configuration
-│   ├── Reduxer.js        # 
+│   ├── Reduxer.js        # Example file to demonstrate the use of combineReducers, createStore, and managing state updates with Redux actions
 │   ├── App.js            # Main application component
 │   └── index.js          # Entry point
 ├── package.json          # Project metadata and dependencies
