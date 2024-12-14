@@ -24,7 +24,7 @@ const List = () => {
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr>
+            <tr key={user.id}>
               <td>{user.id}</td>
               <td key={user.id}>{user.name}</td>
               <td className="d-flex gap-2 justify-content-center">
