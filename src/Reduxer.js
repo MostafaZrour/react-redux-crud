@@ -1,8 +1,10 @@
-import { combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
+import logger from "redux-logger";
 
 export default function Reduxer() {
   const ORDER_PIZZA = "ORDER_PIZZA";
   const ORDER_BURGER = "ORDER_BURGER";
+
   const orderPizza = () => ({ type: ORDER_PIZZA });
   const orderBurger = () => ({ type: ORDER_BURGER });
   const initialPizzaState = {
@@ -40,12 +42,10 @@ export default function Reduxer() {
     burger : BurgerReducer ,
   })
 
-  const store = createStore(reducer);
+  const store = createStore(reducer , applyMiddleware(logger));
 
   console.log("initial State : ", store.getState());
-  const unsubscribe = store.subscribe(() => {
-    console.log("Updated State : ", store.getState());
-  });
+  const unsubscribe = store.subscribe(() => {});
   store.dispatch(orderPizza());
   store.dispatch(orderBurger());
   unsubscribe();
