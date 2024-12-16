@@ -50,3 +50,5 @@ export default function Reduxer() {
   store.dispatch(orderBurger());
   unsubscribe();
 }
+
+//  Component → dispatch(action) → Reducer → Store (New State) → Component

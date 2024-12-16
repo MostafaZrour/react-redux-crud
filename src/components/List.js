@@ -4,9 +4,9 @@ import { deleteUser } from "../Action";
 import { Link } from "react-router-dom";
 
 const List = () => {
-  const users = useSelector((state) => state.userReducer.users);
+  const users = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
-  
+
   const handleDelete = (id) => {
     dispatch(deleteUser(id));
   };
@@ -23,26 +23,29 @@ const List = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td key={user.id}>{user.name}</td>
-              <td className="d-flex gap-2 justify-content-center">
-                <button
-                  className="btn btn-outline-danger"
-                  onClick={() => handleDelete(user.id)}
-                >
-                  <i className="bi bi-trash"></i>
-                </button>
-                <Link
-                  className="btn btn-primary"
-                  to={`update/${user.id}`}
-                >
-                  <i className="bi bi-pencil"></i>
-                </Link>
-              </td>
+          {users.length !== 0 ? (
+            users.map((user) => (
+              <tr key={user.id}>
+                <td>{user.id}</td>
+                <td key={user.id}>{user.name}</td>
+                <td className="d-flex gap-2 justify-content-center">
+                  <button
+                    className="btn btn-outline-danger"
+                    onClick={() => handleDelete(user.id)}
+                  >
+                    <i className="bi bi-trash"></i>
+                  </button>
+                  <Link className="btn btn-primary" to={`update/${user.id}`}>
+                    <i className="bi bi-pencil"></i>
+                  </Link>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr className="">
+              <td className="p-3" colSpan={3}>No users found. Add some users to see the list!</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
