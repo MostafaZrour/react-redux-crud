@@ -33,11 +33,12 @@ const Update = () => {
 
   return (
     <div>
+      <h1 className="text-center my-5">React Redux CRUD</h1>
       <h2>Update User</h2>
       <div className="border rounded p-3 w-100">
-      <Link className="btn btn-primary mb-3 w-100" to="/">
-        Back Home
-      </Link>
+        <Link className="btn btn-primary mb-3 w-100" to="/">
+          Back Home
+        </Link>
         <input
           type="text"
           placeholder="Update name"

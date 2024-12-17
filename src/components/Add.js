@@ -10,9 +10,9 @@ const Add = () => {
 
   const handleAdd = () => {
     if (name.trim() === "") {
-      setErrors((preError) => ({...preError, name: "Name cannot be empty" }));
+      setErrors((preError) => ({ ...preError, name: "Name cannot be empty" }));
       return;
-    }else {
+    } else {
       setErrors((prevErrors) => ({ ...prevErrors, name: "" }));
     }
     const newUser = { id: Date.now(), name };
@@ -22,6 +22,7 @@ const Add = () => {
 
   return (
     <>
+      <h1 className="text-center my-5">React Redux CRUD</h1>
       <div className="d-flex justify-content-center align-items-center">
         <form className="border rounded p-3 w-100">
           <input

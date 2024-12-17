@@ -1,18 +1,19 @@
 import Add from "./components/Add";
+import Layout from "./components/Layout";
 import Update from "./components/Update";
-import {BrowserRouter , Routes , Route} from "react-router-dom";
+import PizzaBox from "./components/PizzaBox";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
-
   return (
-    <div className="container">
-      <h1 className="text-center my-5">React Redux CRUD</h1>
-        <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Add />} />
-          <Route path="/update/:id" element={<Update />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Add />} />
+            <Route path="/update/:id" element={<Update />} />
+            <Route path="/pizza" element={<PizzaBox />} />
+          </Route>
         </Routes>
-        </BrowserRouter>
-    </div>
+      </BrowserRouter>
   );
 };
 

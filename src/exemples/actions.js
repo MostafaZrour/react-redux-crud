@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
 // Thunk Function
 const fetchProducts = () => {
   return (dispatch) => {
-    dispatch(fetchRequest());    
+    dispatch(fetchRequest()); 
     fetch("https://fakestoreapi.com/products/1")
     .then((res) => res.json())
     .then((products) => {
@@ -50,11 +50,11 @@ const fetchProducts = () => {
 // Store
 const store = createStore(reducer, applyMiddleware(thunk));
 
-// React Component
-const App = () => {
-  const dispatch = useDispatch();
-  dispatch(fetchProducts());
-};
+// // React Component
+// const App = () => {
+//   const dispatch = useDispatch();
+//   dispatch(fetchProducts());
+// };
 
 export default App;
 export { store };
