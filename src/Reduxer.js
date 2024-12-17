@@ -44,11 +44,8 @@ export default function Reduxer() {
 
   const store = createStore(reducer , applyMiddleware(logger));
 
-  console.log("initial State : ", store.getState());
-  const unsubscribe = store.subscribe(() => {});
-  store.dispatch(orderPizza());
-  store.dispatch(orderBurger());
-  unsubscribe();
+  // store.dispatch(orderPizza());
+  // store.dispatch(orderBurger());
 }
 
 //  Component → dispatch(action) → Reducer → Store (New State) → Component
