@@ -1,9 +1,10 @@
 const initialState = 100;
 
 function PizzaReducer(state = initialState, action) {
-    switch(action.type){
+    const {type , payload } = action ;
+    switch(type){
         case "ORDER_PIZZA":
-            return state !== 0 ? state - 1 : state ;
+            return state > 0 && payload <= state ? state - payload : state ;
         default :
             return state ;
     }

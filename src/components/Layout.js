@@ -17,6 +17,11 @@ export default function Layout() {
                 Pizza
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/products">
+                Products
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
