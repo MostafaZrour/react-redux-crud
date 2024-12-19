@@ -6,16 +6,16 @@ import Products from "./components/Products";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Add />} />
-            <Route path="/update/:id" element={<Update />} />
-            <Route path="/pizza" element={<PizzaBox />} />
-            <Route path="/products" element={<Products />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Add />} />
+          <Route path="/update/:id" element={<Update />} />
+          <Route path="/pizza" element={<PizzaBox />} />
+          <Route path="/products" element={<Products />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

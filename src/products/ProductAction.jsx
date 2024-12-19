@@ -14,7 +14,6 @@ export const fetchProducts = () => {
       .then((res) => res.json())
       .then((products) => {
         dispatch(fetchSuccess(products));
-        console.log(products);
       })
       .catch(() => dispatch(fetchError()));
   };

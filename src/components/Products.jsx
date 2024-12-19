@@ -41,11 +41,10 @@ export default function Products() {
         </div>
       )}
       {productsData.error && (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert alert-danger mt-5" role="alert">
           Failed to fetch products
         </div>
       )}
-
       {productsData.products && (
         <div className="row row-cols-1 row-cols-md-3 g-4 mt-4">
           {productsData.products.map((pr, index) => (
