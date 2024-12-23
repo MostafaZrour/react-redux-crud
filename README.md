@@ -70,20 +70,28 @@ Before running this project, ensure you have the following installed:
 
 ```
 react-redux-crud/
-├── public/                # Static assets
+├── public/                 # Static assets
 ├── src/
-│   ├── action.js         # Redux action creators
-│   ├── components/       # React components
-│   │     ├── add.js      # Component for adding a new user via a form.
-│   │     ├── update.js   # Component for updating an existing user with prefilled data.
-│   │     └── list.js     # Component for displaying the list of users and providing edit/delete actions.
-│   ├── reducer.js        # Redux reducers
-│   ├── store.js          # Redux store configuration
-│   ├── Reduxer.js        # Example file to demonstrate the use of combineReducers, createStore, and managing state updates with Redux actions
-│   ├── App.js            # Main application component
-│   └── index.js          # Entry point
-├── package.json          # Project metadata and dependencies
-└── README.md             # Project documentation
+│   ├── components/         # React components
+│   │     Add.js            # Component for adding a new user via a form.
+│   │     Layout.js         # Main layout component to structure the application.
+│   │     List.js           # Component for displaying the list of users and providing edit/delete actions.
+│   │     PizzaBox.jsx      # Component representing individual pizza items or orders.
+│   │     Products.jsx      # Component for displaying and managing products fetched from the API.
+│   │     Update.js         # Component for updating an existing user with prefilled data.
+│   ├── products/           # Redux files for managing products
+│   │     ActionTypes.jsx   # Contains action type constants for product-related actions.
+│   │     ProductAction.jsx # Redux action creators for handling products.
+│   │     ProductReducer.jsx# Handles state changes related to products in the Redux store.
+│   ├── reducers/           # Redux reducers
+│   │     PizzaReducer.jsx  # Reducer for managing pizza-related state (e.g., orders, inventory).
+│   │     UserReducer.jsx   # Reducer for managing user-related state (e.g., CRUD operations).
+│   ├── store.js            # Redux store configuration
+│   ├── App.js              # Main application component
+│   └── index.js            # Entry point
+├── package.json            # Project metadata and dependencies
+└── README.md               # Project documentation
+
 
 ```
 
